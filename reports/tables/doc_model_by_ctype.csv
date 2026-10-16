@@ -1,0 +1,4 @@
+ctype,images,fakes,flagged,recall,fpr
+Crop_and_Replace,33,33,23,0.696969696969697,
+Inpaint_and_Rewrite,262,262,249,0.950381679389313,
+Real,592,0,35,,0.05912162162162162

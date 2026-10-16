@@ -1,0 +1,12 @@
+# Back-tested by scripts/11_monitoring.py before promotion to rules.yaml.
+rules:
+  - id: R16_DEVICE_FARM
+    description: Same online device used by 2+ other identities in the last 7 days
+    condition: device_other_tckn_7d >= 2
+    weight: 40
+    owner: IT Security
+  - id: R17_IP_NETWORK_BURST
+    description: Same /24 IP network used by 3+ other identities online in the last 7 days
+    condition: ipnet_other_tckn_7d >= 3
+    weight: 20
+    owner: IT Security

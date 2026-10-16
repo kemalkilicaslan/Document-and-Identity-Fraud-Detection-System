@@ -1,0 +1,276 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>case_study</title><style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;
+color:#1f2933;line-height:1.55}table{border-collapse:collapse;margin:1rem 0;font-size:.9rem}th,td{border:1px solid #d5dbe1;
+padding:.35rem .6rem;text-align:right}th{background:#f1f4f7}td:first-child,th:first-child{text-align:left}
+img{max-width:100%;border:1px solid #e4e7eb;margin:.5rem 0}h1,h2{color:#102a43}code{background:#f1f4f7;padding:0 .25rem}</style></head><body><h1>Case Study: RING-031</h1>
+<h2>Summary</h2>
+<ul>
+<li><strong>12 applications</strong> through 1 branch(es) and 1 agent(s) within 40 days.</li>
+<li>Shared attributes: phone on 8, IBAN on 8, address on 5 and device on 4 applications.</li>
+<li>Total loss: <strong>2.4M TRY</strong>. Contract status: DEFAULTED 10, ACTIVE 1, ALLOCATED 1.</li>
+<li>Alerts at application time: <strong>8/12</strong>. First alert: 2026-01-10 12:42.</li>
+</ul>
+<p><img alt="Ring network" src="figures/ring_network.png" /></p>
+<h2>Timeline</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">app_ts</th>
+<th style="text-align: left;">application_id</th>
+<th style="text-align: left;">branch_id</th>
+<th style="text-align: left;">agent_id</th>
+<th style="text-align: left;">channel</th>
+<th style="text-align: right;">financing_amount</th>
+<th style="text-align: right;">doc_score</th>
+<th style="text-align: right;">rule_score</th>
+<th style="text-align: right;">hybrid_score</th>
+<th style="text-align: left;">alert</th>
+<th style="text-align: left;">rules_fired</th>
+<th style="text-align: left;">status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2025-12-27 13:20</td>
+<td style="text-align: left;">APP0014934</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">WEB</td>
+<td style="text-align: right;">1365</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">False</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2025-12-30 02:19</td>
+<td style="text-align: left;">APP0015074</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">MOBILE</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.026</td>
+<td style="text-align: left;">False</td>
+<td style="text-align: left;">R15_NIGHT_ONLINE</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-01-02 01:17</td>
+<td style="text-align: left;">APP0015213</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">266</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: left;">False</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-01-10 12:42</td>
+<td style="text-align: left;">APP0015659</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">1699</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">0.228</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R01_DOC_FORGERY_HIGH</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-01-18 05:11</td>
+<td style="text-align: left;">APP0016028</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">694</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">0.401</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R01_DOC_FORGERY_HIGH,R07_SHARED_PHONE</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-01-18 14:54</td>
+<td style="text-align: left;">APP0016047</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">398</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">0.228</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R01_DOC_FORGERY_HIGH</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-01-28 07:47</td>
+<td style="text-align: left;">APP0016530</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">1182</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">0.176</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R07_SHARED_PHONE</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-01-31 02:09</td>
+<td style="text-align: left;">APP0016683</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">777</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">0.175</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R08_SHARED_IBAN</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-02 01:21</td>
+<td style="text-align: left;">APP0016788</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">608</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">False</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ACTIVE</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-03 13:21</td>
+<td style="text-align: left;">APP0016865</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">MOBILE</td>
+<td style="text-align: right;">274</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">0.176</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R08_SHARED_IBAN</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-04 21:52</td>
+<td style="text-align: left;">APP0016951</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">MOBILE</td>
+<td style="text-align: right;">723</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R02_DOC_FORGERY_MEDIUM,R07_SHARED_PHONE,R08_SHARED_IBAN</td>
+<td style="text-align: left;">ALLOCATED</td>
+</tr>
+<tr>
+<td style="text-align: left;">2026-02-06 08:14</td>
+<td style="text-align: left;">APP0017010</td>
+<td style="text-align: left;">S008</td>
+<td style="text-align: left;">T0037</td>
+<td style="text-align: left;">BRANCH</td>
+<td style="text-align: right;">860</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">0.351</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">R07_SHARED_PHONE,R08_SHARED_IBAN</td>
+<td style="text-align: left;">DEFAULTED</td>
+</tr>
+</tbody>
+</table>
+<h2>Root cause</h2>
+<ol>
+<li><strong>The first applications looked clean.</strong> The shared phone and IBAN rules only look at earlier applications. 3 of the first 3 applications raised no alert because their phone and IBAN had not yet been seen with another identity.</li>
+<li><strong>Signals below the thresholds.</strong> No rule fired on 3 of the 4 missed applications. Their average document score was 0.06, and declared income was above the occupation median but below the 3x threshold.</li>
+<li><strong>One branch, few agents.</strong> Most applications came through a single branch and a small number of agents. The agent rule only looks at cancellation history, so it did not see this pattern.</li>
+</ol>
+<h2>Missed applications</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">application_id</th>
+<th style="text-align: left;">app_ts</th>
+<th style="text-align: right;">rule_score</th>
+<th style="text-align: right;">hybrid_score</th>
+<th style="text-align: left;">rules_fired</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">APP0014934</td>
+<td style="text-align: left;">2025-12-27 13:20:28.613159</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">APP0015074</td>
+<td style="text-align: left;">2025-12-30 02:19:41.568413</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.026</td>
+<td style="text-align: left;">R15_NIGHT_ONLINE</td>
+</tr>
+<tr>
+<td style="text-align: left;">APP0015213</td>
+<td style="text-align: left;">2026-01-02 01:17:46.686803</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">APP0016788</td>
+<td style="text-align: left;">2026-02-02 01:21:11.960813</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2>Actions</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suspend the ring's active contracts before allocation and request identity verification</td>
+<td>Operations, Underwriting</td>
+</tr>
+<tr>
+<td>Investigate the holders of the shared phones and IBANs and the agent; prepare a criminal complaint if confirmed</td>
+<td>Internal Control, Legal</td>
+</tr>
+<tr>
+<td>Re-screen earlier applications when a new link appears</td>
+<td>Fraud Management, IT</td>
+</tr>
+<tr>
+<td>Add a cluster rule: same branch, 30 days, 3+ shared attributes</td>
+<td>Fraud Management</td>
+</tr>
+</tbody>
+</table></body></html>

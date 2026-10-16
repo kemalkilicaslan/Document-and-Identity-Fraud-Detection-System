@@ -1,0 +1,12 @@
+metric,value
+doc_roc_auc,0.9829019697663766
+doc_pr_auc,0.9743095345427505
+doc_recall_at_1pct_fpr,0.8406779661016949
+doc_recall_at_5pct_fpr,0.911864406779661
+doc_recall_at_10pct_fpr,0.9525423728813559
+field_roc_auc,0.9736328159499015
+field_pr_auc,0.8737028134429103
+localisation_acc_top_field,0.9117647058823529
+operating_threshold,0.3280611038208008
+test_fpr_at_threshold,0.05912162162162162
+test_recall_at_threshold,0.9220338983050848

@@ -1,0 +1,3 @@
+rule_id,alerts,precision
+R16_DEVICE_FARM,107,1.0
+R17_IP_NETWORK_BURST,92,1.0

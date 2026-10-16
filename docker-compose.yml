@@ -1,0 +1,26 @@
+services:
+  fraud-api:
+    build: .
+    image: document-and-identity-fraud-detection-system:latest
+    container_name: document-and-identity-fraud-detection-api
+    ports:
+      - "8000:8000"              # http://localhost:8000/docs
+    volumes:
+      - ./data:/app/data         # SIDTD zips, extracted images, DuckDB database
+      - ./models:/app/models     # ONNX forgery model, calibration, LightGBM, alert threshold
+      - ./reports:/app/reports   # tables, figures and HTML reports
+    # Override the default command to run any other step, e.g.:
+    # command: ["./run_all.sh"]
+    # command: ["pytest"]
+
+  fraud-dashboard:
+    image: document-and-identity-fraud-detection-system:latest
+    container_name: document-and-identity-fraud-detection-dashboard
+    depends_on: [fraud-api]
+    command: ["streamlit", "run", "src/docfraud/dashboard.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    ports:
+      - "8501:8501"              # http://localhost:8501
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports

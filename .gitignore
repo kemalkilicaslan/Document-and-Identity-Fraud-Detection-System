@@ -1,0 +1,32 @@
+# Data, model weights and run logs are not redistributed (see README for download links).
+# Folder layout is kept through .gitkeep files.
+data/**
+!data/**/
+models/*
+reports/logs/
+*.log
+!**/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments and secrets
+.venv/
+venv/
+.env
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/

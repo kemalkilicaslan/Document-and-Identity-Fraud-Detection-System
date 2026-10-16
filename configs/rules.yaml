@@ -1,0 +1,83 @@
+# Each condition is a SQL expression over application_features.
+# Rule score = min(100, sum of fired weights).
+
+decision_bands:
+  DECLINE: 70
+  REVIEW: 30
+
+rules:
+  - id: R01_DOC_FORGERY_HIGH
+    description: ID document forgery score is very high
+    condition: doc_score >= 0.80
+    weight: 45
+    owner: Operations
+  - id: R02_DOC_FORGERY_MEDIUM
+    description: ID document forgery score is elevated
+    condition: doc_score >= 0.50 AND doc_score < 0.80
+    weight: 20
+    owner: Operations
+  - id: R03_MRZ_INCONSISTENT
+    description: MRZ check digit fails or MRZ disagrees with the visual zone
+    condition: mrz_checkdigit_fail OR mrz_viz_mismatch
+    weight: 15
+    owner: Operations
+  - id: R04_DOC_DATE_LOGIC
+    description: Document dates are inconsistent (issued before birth, expiry before issue)
+    condition: date_logic_fail
+    weight: 10
+    owner: Operations
+  - id: R05_TCKN_INVALID
+    description: National ID number fails the check-digit algorithm
+    condition: tckn_invalid
+    weight: 40
+    owner: Operations
+  - id: R06_TCKN_VELOCITY
+    description: Same identity applied at another branch in the last 30 days
+    condition: same_tckn_other_branch_30d >= 1
+    weight: 30
+    owner: Sales
+  - id: R07_SHARED_PHONE
+    description: Phone number used by 2+ other identities in the last 90 days
+    condition: phone_other_tckn_90d >= 2
+    weight: 35
+    owner: Internal Control
+  - id: R08_SHARED_IBAN
+    description: IBAN used by 2+ other identities in the last 90 days
+    condition: iban_other_tckn_90d >= 2
+    weight: 35
+    owner: Internal Control
+  - id: R09_SHARED_ADDRESS
+    description: 3+ other identities at the same address in the last 30 days
+    condition: address_other_tckn_30d >= 3
+    weight: 20
+    owner: Internal Control
+  - id: R10_INCOME_OUTLIER
+    description: Declared income is more than 3x the occupation median
+    condition: income_to_occupation_median >= 3
+    weight: 20
+    owner: Underwriting
+  - id: R11_UNEXPLAINED_DOWN_PAYMENT
+    description: Down payment above 12 months of income with allocation within 6 months
+    condition: down_payment_months_income >= 12 AND allocation_month <= 6
+    weight: 25
+    owner: Underwriting
+  - id: R12_GUARANTOR_REUSE
+    description: Guarantor backs 2+ other applicants in 180 days or has an invalid ID number
+    condition: guarantor_other_apps_180d >= 2 OR guarantor_tckn_invalid
+    weight: 35
+    owner: Underwriting
+  - id: R13_AGENT_EARLY_CANCEL
+    description: Agent early-cancellation rate above 15% over 180 days (at least 15 applications)
+    condition: agent_early_cancel_rate_180d >= 0.15 AND agent_prior_apps_180d >= 15
+    weight: 30
+    owner: Sales
+  - id: R14_YOUNG_HIGH_INCOME
+    description: Applicant under 25 with income above 2.5x the occupation median
+    condition: age < 25 AND income_to_occupation_median >= 2.5
+    weight: 25
+    owner: Underwriting
+  - id: R15_NIGHT_ONLINE
+    description: Online application between 00:00 and 06:00
+    condition: is_night AND is_online
+    weight: 5
+    owner: Operations

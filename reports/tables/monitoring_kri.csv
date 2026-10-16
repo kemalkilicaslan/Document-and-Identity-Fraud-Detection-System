@@ -1,0 +1,106 @@
+month,kri,value,amber,red,status
+2025-01,Documents with forgery score >= 0.5 (%),4.364326375711575,8.0,12.0,GREEN
+2025-01,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2025-01,Applications with a shared phone or IBAN,2.0,25.0,45.0,GREEN
+2025-01,Agents with early-cancel rate >= 20% and z > 3,0.0,1.0,2.0,GREEN
+2025-01,Score PSI vs. baseline,0.0026198370750973405,0.1,0.25,GREEN
+2025-02,Documents with forgery score >= 0.5 (%),4.245283018867925,8.0,12.0,GREEN
+2025-02,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2025-02,Applications with a shared phone or IBAN,7.0,25.0,45.0,GREEN
+2025-02,Agents with early-cancel rate >= 20% and z > 3,0.0,1.0,2.0,GREEN
+2025-02,Score PSI vs. baseline,0.0008003486998602212,0.1,0.25,GREEN
+2025-03,Documents with forgery score >= 0.5 (%),3.7165082108902334,8.0,12.0,GREEN
+2025-03,Online applications from a device seen with 2+ identities,1.0,10.0,25.0,GREEN
+2025-03,Applications with a shared phone or IBAN,9.0,25.0,45.0,GREEN
+2025-03,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2025-03,Score PSI vs. baseline,0.00013005408699959196,0.1,0.25,GREEN
+2025-04,Documents with forgery score >= 0.5 (%),4.530477759472817,8.0,12.0,GREEN
+2025-04,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2025-04,Applications with a shared phone or IBAN,15.0,25.0,45.0,GREEN
+2025-04,Agents with early-cancel rate >= 20% and z > 3,0.0,1.0,2.0,GREEN
+2025-04,Score PSI vs. baseline,0.0005669420136822645,0.1,0.25,GREEN
+2025-05,Documents with forgery score >= 0.5 (%),3.2520325203252036,8.0,12.0,GREEN
+2025-05,Online applications from a device seen with 2+ identities,1.0,10.0,25.0,GREEN
+2025-05,Applications with a shared phone or IBAN,6.0,25.0,45.0,GREEN
+2025-05,Agents with early-cancel rate >= 20% and z > 3,0.0,1.0,2.0,GREEN
+2025-05,Score PSI vs. baseline,0.001507316487661494,0.1,0.25,GREEN
+2025-06,Documents with forgery score >= 0.5 (%),4.570970328789094,8.0,12.0,GREEN
+2025-06,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2025-06,Applications with a shared phone or IBAN,8.0,25.0,45.0,GREEN
+2025-06,Agents with early-cancel rate >= 20% and z > 3,0.0,1.0,2.0,GREEN
+2025-06,Score PSI vs. baseline,0.005594482818686865,0.1,0.25,GREEN
+2025-07,Documents with forgery score >= 0.5 (%),3.8931297709923665,8.0,12.0,GREEN
+2025-07,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2025-07,Applications with a shared phone or IBAN,13.0,25.0,45.0,GREEN
+2025-07,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2025-07,Score PSI vs. baseline,0.002913190362191636,0.1,0.25,GREEN
+2025-08,Documents with forgery score >= 0.5 (%),4.769230769230769,8.0,12.0,GREEN
+2025-08,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2025-08,Applications with a shared phone or IBAN,13.0,25.0,45.0,GREEN
+2025-08,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2025-08,Score PSI vs. baseline,0.00468692234310684,0.1,0.25,GREEN
+2025-09,Documents with forgery score >= 0.5 (%),5.226748654880861,8.0,12.0,GREEN
+2025-09,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2025-09,Applications with a shared phone or IBAN,7.0,25.0,45.0,GREEN
+2025-09,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2025-09,Score PSI vs. baseline,0.0032479926153364622,0.1,0.25,GREEN
+2025-10,Documents with forgery score >= 0.5 (%),5.017667844522968,8.0,12.0,GREEN
+2025-10,Online applications from a device seen with 2+ identities,2.0,10.0,25.0,GREEN
+2025-10,Applications with a shared phone or IBAN,31.0,25.0,45.0,AMBER
+2025-10,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2025-10,Score PSI vs. baseline,0.005313678455096013,0.1,0.25,GREEN
+2025-11,Documents with forgery score >= 0.5 (%),4.964539007092199,8.0,12.0,GREEN
+2025-11,Online applications from a device seen with 2+ identities,2.0,10.0,25.0,GREEN
+2025-11,Applications with a shared phone or IBAN,29.0,25.0,45.0,AMBER
+2025-11,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2025-11,Score PSI vs. baseline,0.008468947229203647,0.1,0.25,GREEN
+2025-12,Documents with forgery score >= 0.5 (%),5.714285714285714,8.0,12.0,GREEN
+2025-12,Online applications from a device seen with 2+ identities,4.0,10.0,25.0,GREEN
+2025-12,Applications with a shared phone or IBAN,35.0,25.0,45.0,AMBER
+2025-12,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2025-12,Score PSI vs. baseline,0.01637348565213414,0.1,0.25,GREEN
+2026-01,Documents with forgery score >= 0.5 (%),5.060858424087124,8.0,12.0,GREEN
+2026-01,Online applications from a device seen with 2+ identities,1.0,10.0,25.0,GREEN
+2026-01,Applications with a shared phone or IBAN,29.0,25.0,45.0,AMBER
+2026-01,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2026-01,Score PSI vs. baseline,0.005906430735216316,0.1,0.25,GREEN
+2026-02,Documents with forgery score >= 0.5 (%),4.402102496714849,8.0,12.0,GREEN
+2026-02,Online applications from a device seen with 2+ identities,3.0,10.0,25.0,GREEN
+2026-02,Applications with a shared phone or IBAN,21.0,25.0,45.0,GREEN
+2026-02,Agents with early-cancel rate >= 20% and z > 3,0.0,1.0,2.0,GREEN
+2026-02,Score PSI vs. baseline,0.0022816913339045765,0.1,0.25,GREEN
+2026-03,Documents with forgery score >= 0.5 (%),3.838892385147892,8.0,12.0,GREEN
+2026-03,Online applications from a device seen with 2+ identities,0.0,10.0,25.0,GREEN
+2026-03,Applications with a shared phone or IBAN,20.0,25.0,45.0,GREEN
+2026-03,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2026-03,Score PSI vs. baseline,0.0015994621046927428,0.1,0.25,GREEN
+2026-04,Documents with forgery score >= 0.5 (%),6.041923551171394,8.0,12.0,GREEN
+2026-04,Online applications from a device seen with 2+ identities,32.0,10.0,25.0,RED
+2026-04,Applications with a shared phone or IBAN,28.0,25.0,45.0,AMBER
+2026-04,Agents with early-cancel rate >= 20% and z > 3,1.0,1.0,2.0,AMBER
+2026-04,Score PSI vs. baseline,0.00789632535879876,0.1,0.25,GREEN
+2026-05,Documents with forgery score >= 0.5 (%),3.9925140361821585,8.0,12.0,GREEN
+2026-05,Online applications from a device seen with 2+ identities,14.0,10.0,25.0,AMBER
+2026-05,Applications with a shared phone or IBAN,21.0,25.0,45.0,GREEN
+2026-05,Agents with early-cancel rate >= 20% and z > 3,2.0,1.0,2.0,RED
+2026-05,Score PSI vs. baseline,0.005136329263112764,0.1,0.25,GREEN
+2026-06,Documents with forgery score >= 0.5 (%),5.33256880733945,8.0,12.0,GREEN
+2026-06,Online applications from a device seen with 2+ identities,27.0,10.0,25.0,RED
+2026-06,Applications with a shared phone or IBAN,23.0,25.0,45.0,GREEN
+2026-06,Agents with early-cancel rate >= 20% and z > 3,2.0,1.0,2.0,RED
+2026-06,Score PSI vs. baseline,0.009357872114692307,0.1,0.25,GREEN
+2026-07,Documents with forgery score >= 0.5 (%),3.87858347386172,8.0,12.0,GREEN
+2026-07,Online applications from a device seen with 2+ identities,25.0,10.0,25.0,RED
+2026-07,Applications with a shared phone or IBAN,11.0,25.0,45.0,GREEN
+2026-07,Agents with early-cancel rate >= 20% and z > 3,2.0,1.0,2.0,RED
+2026-07,Score PSI vs. baseline,0.0014810796726810436,0.1,0.25,GREEN
+2026-08,Documents with forgery score >= 0.5 (%),4.959159859976663,8.0,12.0,GREEN
+2026-08,Online applications from a device seen with 2+ identities,14.0,10.0,25.0,AMBER
+2026-08,Applications with a shared phone or IBAN,21.0,25.0,45.0,GREEN
+2026-08,Agents with early-cancel rate >= 20% and z > 3,3.0,1.0,2.0,RED
+2026-08,Score PSI vs. baseline,0.007327571119192966,0.1,0.25,GREEN
+2026-09,Documents with forgery score >= 0.5 (%),5.022075055187638,8.0,12.0,GREEN
+2026-09,Online applications from a device seen with 2+ identities,14.0,10.0,25.0,AMBER
+2026-09,Applications with a shared phone or IBAN,6.0,25.0,45.0,GREEN
+2026-09,Agents with early-cancel rate >= 20% and z > 3,3.0,1.0,2.0,RED
+2026-09,Score PSI vs. baseline,0.007056930135041741,0.1,0.25,GREEN
