@@ -1,0 +1,4 @@
+check,evaluated,flag_rate_genuine,flag_rate_forged,precision_in_sample
+mrz_checkdigit_fail,46,0.16666666666666666,0.0,0.0
+mrz_viz_mismatch,40,0.05,0.0,0.0
+date_logic_fail,392,0.023255813953488372,0.0,0.0

@@ -1,0 +1,60 @@
+seed: 42
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  synthetic: data/synthetic
+  splits: data/splits
+  patches: data/processed/patches
+  models: models
+  tables: reports/tables
+  figures: reports/figures
+  reports: reports
+  db: data/processed/fraud.duckdb
+
+sidtd:
+  zips: [templates.zip, clips_cropped.zip]
+  non_text_fields: [photo, face, signature, doc_quad, ""]
+
+splits:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+  real_frames_per_doc: {train: 6, val: 3, test: 3}
+  fake_frames_per_variant: {train: 25, val: 5, test: 5}
+
+patches:
+  height: 64
+  pad_px: 6
+  pad_ratio: 0.12
+  train_other_fields: 3
+
+classifier:
+  backbone: resnet18
+  pretrained: true
+  window: 256
+  stride: 128
+  epochs: 6
+  batch_size: 128
+  lr: 0.0003
+  weight_decay: 0.0001
+  num_workers: 4
+
+ocr:
+  max_images: 1200
+  processes: 6
+
+synthetic:
+  start_date: "2025-01-01"
+  end_date: "2026-09-30"
+  n_legit_applications: 29000
+  n_branches: 30
+  n_agents: 220
+  new_fraud_type_start: "2026-04-01"
+
+scoring:
+  train_until: "2026-03-01"
+  maturity_days: 90
+  review_capacity_pct: 0.05
+  baseline_months: ["2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06"]

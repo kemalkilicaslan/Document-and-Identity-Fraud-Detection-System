@@ -1,0 +1,10 @@
+field,tampered,caught
+surname,28,0.75
+type,16,0.75
+number,24,0.8333333333333334
+name,48,0.8541666666666666
+expiry_date,11,0.9090909090909091
+birth_date,27,0.9259259259259259
+gender,13,1.0
+id_number,14,1.0
+nationality,10,1.0

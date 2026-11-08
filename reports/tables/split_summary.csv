@@ -1,0 +1,7 @@
+split,label,images,groups
+test,0,592,139
+test,1,295,95
+train,0,4879,649
+train,1,4044,455
+val,0,620,139
+val,1,393,99

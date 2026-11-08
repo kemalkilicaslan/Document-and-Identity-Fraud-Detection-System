@@ -1,0 +1,32 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Datasets, models and generated results (mounted at runtime via volume)
+data/
+models/
+reports/
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.pt
+*.onnx
+*.duckdb
+
+# Not part of the system
+repos/
+notebooks/
+docs/
+LICENSE
